@@ -10,7 +10,13 @@ Vagrant.configure("2") do |config|
     config.vm.network :forwarded_port, guest: 3306, host: 3307
 
     config.vm.synced_folder "publichtml/", "/var/www/html"
+    config.vm.synced_folder "provision/", "/provision"
+
+
 
     config.vm.network :private_network, ip: "192.168.10.10"
+
+
+    config.vm.provision "shell", path: "provision/db.sh"
 
 end
