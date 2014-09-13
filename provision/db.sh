@@ -20,5 +20,5 @@ mysql -uroot -proot -h localhost  < /provision/magento.sql
 echo "Done creating db"
 
 #move the local xml file.
-mv /var/www/html/env/local/local.xml /var/www/html/app/etc/local.xml
+cp /var/www/html/env/local/local.xml /var/www/html/app/etc/local.xml
 
